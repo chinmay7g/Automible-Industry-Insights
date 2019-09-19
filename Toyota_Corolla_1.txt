@@ -1,0 +1,39 @@
+#Preliminary operations on Toyota Corolla dataset
+
+#importing libraries required
+
+import pandas as pd
+import numpy as np
+
+#reading file into environment
+df = pd.read_csv(r'C:\Users\admin\Desktop\Python Test Data\Toyota.csv')
+df.head(5)
+
+
+#creating copy
+cars_data1 = df.copy()
+
+#converting all unique values to object
+print(np.unique(cars_data1['Doors']))
+cars_data1['Doors'].replace('three',3,inplace= True)
+cars_data1['Doors'].replace('four', 4, inplace = True)
+cars_data1['Doors'].replace('five', 5, inplace = True)
+
+#The corrected datatype is still in object format, hence converting it to int64 dtype for further operation
+cars_data1["Doors"].astype('int64')
+
+#Checking count of missing values in Doors column
+
+cars_data1['Doors'].isnull().sum()
+
+#For checking the attribute whether Metallic colour is given or not
+print(cars_data1['MetColor'])
+
+#counting missing values
+cars_data1['MetColor'].isnull().sum()
+
+#checking missing values for Weight attribute
+cars_data1['Weight'].isnull().sum()
+
+#checking missing value for Fuel type
+cars_data1['FuelType'].isnull().sum()
