@@ -1,0 +1,24 @@
+#Exploratory Data Analysis
+
+
+#creating frequency tables
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv(r'C:\Users\admin\Desktop\Python Test Data\Toyota.csv')
+
+data = df.copy()
+data.head(5)
+
+#creating one-way table
+
+pd.crosstab(index= data['Age'], columns= 'count', dropna = True)
+
+#creating two-way table
+
+pd.crosstab(index = data['Automatic'], columns= data['FuelType'], dropna= True)
+
+#creating joint probability table
+
+pd.crosstab(index= data['FuelType'], columns= data["Automatic"], dropna= True, normalize= True)
+
