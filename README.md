@@ -1,2 +1,2 @@
 # Toyota-Corolla-1
-Performed preliminary tests and Toyota-corolla dataset 
+Performed preliminary tests on Toyota-corolla dataset 
