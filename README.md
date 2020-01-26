@@ -1,2 +1,2 @@
-# Toyota-Corolla-1
+# Automobile Insights
 Performed preliminary tests on Toyota-corolla dataset 
